@@ -35,7 +35,26 @@ public class CharacterFrameData {
     @Column(name = "notes")
     private String notes;
 
-    public CharacterFrameData(Integer id, String character, Integer moveNumber, String command, String hitLevel, int damage, int startUpFrame, int blockFrame, int hitFrame, String hitProperty, int counterHitFrame, String counterHitProperty, String notes){
+    public CharacterFrameData(){
+
+    }
+
+    public CharacterFrameData(String character, Integer moveNumber, String command, String hitLevel, Integer damage, Integer startUpFrame, Integer blockFrame, Integer hitFrame, String hitProperty, Integer counterHitFrame, String counterHitProperty, String notes){
+        this.character = character;
+        this.moveNumber = moveNumber;
+        this.command = command;
+        this.hitLevel = hitLevel;
+        this.damage = damage;
+        this.startUpFrame = startUpFrame;
+        this.blockFrame = blockFrame;
+        this.hitFrame = hitFrame;
+        this.hitProperty = hitProperty;
+        this.counterHitFrame = counterHitFrame;
+        this.counterHitProperty = counterHitProperty;
+        this.notes = notes;
+    }
+
+    public CharacterFrameData(Integer id, String character, Integer moveNumber, String command, String hitLevel, Integer damage, Integer startUpFrame, Integer blockFrame, Integer hitFrame, String hitProperty, Integer counterHitFrame, String counterHitProperty, String notes){
         this.id = id;
         this.character = character;
         this.moveNumber = moveNumber;
@@ -111,9 +130,7 @@ public class CharacterFrameData {
         return character;
     }
 
-    public Integer getMoveNumber(){
-        return moveNumber;
-    }
+    public Integer getMoveNumber(){ return moveNumber; }
 
     public String getCommand() {
         return command;

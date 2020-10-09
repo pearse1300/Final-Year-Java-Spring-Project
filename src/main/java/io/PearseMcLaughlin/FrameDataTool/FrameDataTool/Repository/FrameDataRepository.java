@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface FrameDataRepository extends JpaRepository<CharacterFrameData, String> {
+public interface FrameDataRepository extends JpaRepository<CharacterFrameData, Integer> {
 
-    CharacterFrameData findByCharacter (String text);
+    public List<CharacterFrameData> findAllByCharacter (String character);
+    public CharacterFrameData findById(int id);
 }

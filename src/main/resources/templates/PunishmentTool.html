@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Character Select</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/FrameData/">Tekken Frame Assistant Tool</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/FrameData/characterSelect">Character Frame Data</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/FrameData/block">Punishment Tool</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/FrameData/trap">Frame Trap Tool</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Character Guides</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input id="searchBar" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button onclick="searchFunction()" class="btn btn-outline-success my-2 my-sm-0" type="button" >Search</button>
+        </form>
+    </div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Punishment Tool</h1>
+        <p>Block punishing is when your opponent does a move that you block, and you do a move in response that they can not block. They do an unsafe move and you punish the move.</p>
+        <p><a class="btn btn-primary btn-lg" href="https://www.youtube.com/watch?v=SjLyHkRAT5g" role="button">What is punishment &raquo;</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Player Character</h2>
+            <div class="form-group">
+            <label for="sel1">Select list:</label>
+            <select class="form-control" id="sel1">
+                <option th:each="character : ${characters}" th:text="${character}"></option>
+            </select>
+        </div>
+        </div>
+        <div class="col-md-4">
+            <button onclick="punishFrames()" class="btn btn-outline-success my-2 my-sm-0" href="#" type="submit">Proceed to move Selection</button>
+        </div>
+        <div class="col-md-4">
+            <h2>Opponent</h2>
+            <div class="form-group">
+            <label for="sel2">Select list:</label>
+            <select class="form-control" id="sel2">
+                <option th:each="character : ${characters}" th:text="${character}"></option>
+            </select>
+        </div>
+        </div>
+    </div>
+
+    <hr>
+
+</div> <!-- /container -->
+
+</body>
+
+<script>
+function punishFrames(){
+var character = document.getElementById("sel1").value;
+var opponent = document.getElementById("sel2").value;
+window.location = "http://localhost:8080/FrameData/block/"+character+"/"+opponent;
+}
+</script>
+
+<script>
+function searchFunction(){
+var character = document.getElementById("searchBar").value;
+window.location = "http://localhost:8080/FrameData/"+character;
+}
+</script>
+</html>

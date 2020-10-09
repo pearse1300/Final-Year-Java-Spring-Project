@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Character Select</title>
+
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/FrameData/">Tekken Frame Assistant Tool</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/FrameData/characterSelect">Character Frame Data</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/FrameData/block">Punishment Tool</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/FrameData/trap">Frame Trap Tool</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Character Guides</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input id="searchBar" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button onclick="searchFunction()" class="btn btn-outline-success my-2 my-sm-0" type="button" >Search</button>
+        </form>
+    </div>
+</nav>
+
+<main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Welcome to the Tekken 7 Frame Assistant Tool</h1>
+            <p>This tool is designed to help new players get involved with the inner workings of tekken in preparation for the E-sports season. this application was designed to help get newer players up to speed with frame data in a more streamlined and conciese way.</p>
+            <p><a class="btn btn-primary btn-lg" href="https://www.youtube.com/watch?v=8gtklnzge00" role="button">What is frame data &raquo;</a></p>
+            <p><a class="btn btn-primary btn-lg" href="https://www.youtube.com/watch?v=wc-EY6D6ME8" role="button">Tekken world tour 2020 trailer &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Akuma.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Alisa">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Alisa.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Anna">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Anna.png">
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+    </div> <!-- /container -->
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Armor-King.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Asuka.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Bob.png">
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Bryan.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Claudio.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Devil-jin.png">
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Feng-v2.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/12/T7_S3-Ganryu.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Giggas.png">
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Heihachi.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Hwoarang.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://localhost:8080/FrameData/Akuma">
+                    <img src="http://rbnorway.org/wp-content/uploads/2019/09/T7_S3-Jack-7.png">
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+    </div>
+
+</main>
+
+<footer class="container">
+    <p>&copy; Pearse McLaughlin 2019-2020</p>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script>
+function searchFunction(){
+var character = document.getElementById("searchBar").value;
+window.location = "http://localhost:8080/FrameData/"+character;
+}
+</script>
+</body>
+</html>
